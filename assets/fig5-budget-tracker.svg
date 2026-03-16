@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1600" viewBox="0 0 900 1600" role="img" aria-labelledby="title desc">
+  <title id="title">Figure 5 - Budget Tracker</title>
+  <desc id="desc">Mobile budget tracker with categories, trend chart and monthly overview.</desc>
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4f8fc"/>
+      <stop offset="100%" stop-color="#fff5f8"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1600" fill="url(#bg5)"/>
+  <rect x="130" y="40" width="640" height="1520" rx="78" fill="#111827"/>
+  <rect x="164" y="128" width="572" height="1366" rx="52" fill="#fff"/>
+  <rect x="380" y="76" width="140" height="18" rx="9" fill="#374151"/>
+
+  <text x="210" y="220" style="font:700 40px 'Poppins';fill:#1f2937">Budget Tracker</text>
+  <text x="210" y="262" style="font:500 24px 'Inter';fill:#6b7280">March 2026 Overview</text>
+
+  <rect x="200" y="300" width="500" height="210" rx="24" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="236" y="352" style="font:700 30px 'Poppins';fill:#1f2937">Total Budget</text>
+  <text x="236" y="430" style="font:800 74px 'Poppins';fill:#b0003a">$2,450</text>
+  <text x="236" y="474" style="font:600 24px 'Inter';fill:#6b7280">Remaining: $820</text>
+
+  <rect x="200" y="540" width="500" height="290" rx="24" fill="#fff0f5" stroke="#f9a8c0"/>
+  <text x="236" y="592" style="font:700 30px 'Poppins';fill:#1f2937">Spending Categories</text>
+  <rect x="236" y="626" width="420" height="18" rx="9" fill="#fda4af"/>
+  <rect x="236" y="662" width="360" height="18" rx="9" fill="#fb7185"/>
+  <rect x="236" y="698" width="310" height="18" rx="9" fill="#f43f5e"/>
+  <rect x="236" y="734" width="250" height="18" rx="9" fill="#e11d48"/>
+  <rect x="236" y="770" width="210" height="18" rx="9" fill="#be123c"/>
+
+  <rect x="200" y="862" width="500" height="250" rx="24" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="236" y="914" style="font:700 30px 'Poppins';fill:#1f2937">Trend Tracking</text>
+  <polyline points="236,1040 300,980 360,1010 430,920 500,940 570,870 650,900" fill="none" stroke="#b0003a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="300" cy="980" r="8" fill="#b0003a"/>
+  <circle cx="430" cy="920" r="8" fill="#b0003a"/>
+  <circle cx="570" cy="870" r="8" fill="#b0003a"/>
+
+  <rect x="200" y="1144" width="500" height="230" rx="24" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="236" y="1196" style="font:700 30px 'Poppins';fill:#1f2937">Progress Indicators</text>
+  <rect x="236" y="1230" width="420" height="20" rx="10" fill="#e5e7eb"/>
+  <rect x="236" y="1230" width="250" height="20" rx="10" fill="#f43f5e"/>
+  <rect x="236" y="1270" width="420" height="20" rx="10" fill="#e5e7eb"/>
+  <rect x="236" y="1270" width="320" height="20" rx="10" fill="#f43f5e"/>
+
+  <text x="140" y="1578" style="font:500 24px 'Inter';fill:#6b7280">Figure 5. Budget Tracker</text>
+</svg>

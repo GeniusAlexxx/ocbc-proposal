@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Figure 1 - Homepage Mockup</title>
+  <desc id="desc">OCBC homepage wireframe showing hero, education highlights, stories, and CTAs.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff5f8"/>
+      <stop offset="100%" stop-color="#f4f7fb"/>
+    </linearGradient>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b0003a"/>
+      <stop offset="100%" stop-color="#d91457"/>
+    </linearGradient>
+    <style>
+      .h{font:700 30px 'Poppins',Arial,sans-serif;fill:#1f2937}
+      .t{font:500 18px 'Inter',Arial,sans-serif;fill:#6b7280}
+      .c{fill:#fff;stroke:#e5e7eb;stroke-width:2}
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="60" y="40" width="1480" height="820" rx="28" fill="#fff" stroke="#e5e7eb"/>
+
+  <rect x="100" y="80" width="1400" height="70" rx="14" class="c"/>
+  <rect x="130" y="102" width="200" height="24" rx="8" fill="#b0003a"/>
+  <rect x="840" y="104" width="120" height="18" rx="8" fill="#d1d5db"/>
+  <rect x="975" y="104" width="120" height="18" rx="8" fill="#d1d5db"/>
+  <rect x="1110" y="104" width="120" height="18" rx="8" fill="#d1d5db"/>
+  <rect x="1245" y="104" width="120" height="18" rx="8" fill="#d1d5db"/>
+
+  <rect x="100" y="180" width="1400" height="250" rx="22" fill="url(#hero)"/>
+  <text x="150" y="245" class="h" fill="#fff">OCBC Bank Digital Proposal</text>
+  <text x="150" y="292" style="font:700 44px 'Poppins',Arial,sans-serif;fill:#fff">Financial Literacy for Gen Z</text>
+  <rect x="150" y="332" width="560" height="16" rx="8" fill="#ffd6e4" opacity=".9"/>
+  <rect x="150" y="360" width="470" height="16" rx="8" fill="#ffd6e4" opacity=".85"/>
+  <rect x="150" y="388" width="190" height="26" rx="10" fill="#fff"/>
+  <rect x="355" y="388" width="180" height="26" rx="10" fill="#fce7ef"/>
+
+  <rect x="860" y="225" width="560" height="160" rx="16" fill="#fff" opacity=".12"/>
+  <rect x="900" y="250" width="240" height="14" rx="7" fill="#fff" opacity=".6"/>
+  <rect x="900" y="278" width="400" height="12" rx="6" fill="#fff" opacity=".5"/>
+  <rect x="900" y="302" width="360" height="12" rx="6" fill="#fff" opacity=".5"/>
+  <rect x="900" y="332" width="210" height="30" rx="11" fill="#fff" opacity=".88"/>
+
+  <rect x="100" y="470" width="430" height="170" rx="16" class="c"/>
+  <text x="130" y="516" class="h" style="font-size:24px">Financial Education Highlights</text>
+  <rect x="130" y="540" width="350" height="12" rx="6" fill="#d1d5db"/>
+  <rect x="130" y="564" width="290" height="12" rx="6" fill="#d1d5db"/>
+  <rect x="130" y="590" width="160" height="26" rx="10" fill="#ffe5ef"/>
+
+  <rect x="585" y="470" width="430" height="170" rx="16" class="c"/>
+  <text x="615" y="516" class="h" style="font-size:24px">Community Stories</text>
+  <circle cx="640" cy="564" r="26" fill="#f9a8c0"/>
+  <rect x="680" y="548" width="290" height="12" rx="6" fill="#d1d5db"/>
+  <rect x="680" y="572" width="250" height="12" rx="6" fill="#d1d5db"/>
+  <rect x="680" y="596" width="140" height="22" rx="8" fill="#ffe5ef"/>
+
+  <rect x="1070" y="470" width="430" height="170" rx="16" class="c"/>
+  <text x="1100" y="516" class="h" style="font-size:24px">Action Panel</text>
+  <rect x="1100" y="548" width="350" height="12" rx="6" fill="#d1d5db"/>
+  <rect x="1100" y="572" width="300" height="12" rx="6" fill="#d1d5db"/>
+  <rect x="1100" y="596" width="170" height="26" rx="10" fill="#b0003a"/>
+
+  <text x="100" y="700" class="t">Figure 1. Homepage - hero banner, CSR intro, education highlights, community stories, and CTAs.</text>
+</svg>
