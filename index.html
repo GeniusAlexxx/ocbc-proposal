@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OCBC Bank – Financial Literacy for Gen Z</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ocbc-red: #b0003a;
+        --white: #ffffff;
+        --light-bg: #f5f6fa;
+        --dark-text: #1f2937;
+        --muted-text: #6b7280;
+        --card-border: #e5e7eb;
+        --radius: 16px;
+        --shadow-soft: 0 10px 30px rgba(31, 41, 55, 0.07);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", Arial, Helvetica, sans-serif;
+        color: var(--dark-text);
+        background: linear-gradient(180deg, #fff 0%, var(--light-bg) 35%, #fff 100%);
+        line-height: 1.65;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .container {
+        width: min(1120px, 92%);
+        margin: 0 auto;
+      }
+
+      .top-nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #f1f5f9;
+      }
+
+      .top-nav .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 14px 0;
+      }
+
+      .brand {
+        font-family: "Poppins", Arial, sans-serif;
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        color: var(--ocbc-red);
+        white-space: nowrap;
+      }
+
+      .menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .menu a {
+        text-decoration: none;
+        color: var(--dark-text);
+        font-size: 0.9rem;
+        font-weight: 600;
+        padding: 6px 10px;
+        border-radius: 999px;
+        transition: 0.25s ease;
+      }
+
+      .menu a:hover {
+        background: #ffe7ef;
+        color: var(--ocbc-red);
+      }
+
+      section {
+        padding: 78px 0;
+      }
+
+      .section-header {
+        margin-bottom: 22px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--ocbc-red);
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 0;
+        font-family: "Poppins", Arial, sans-serif;
+        line-height: 1.25;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 3.3rem);
+      }
+
+      h2 {
+        font-size: clamp(1.55rem, 2.4vw, 2.25rem);
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted-text);
+      }
+
+      .hero {
+        padding-top: 96px;
+      }
+
+      .hero-panel {
+        display: grid;
+        gap: 28px;
+        grid-template-columns: 1.2fr 0.8fr;
+        background: linear-gradient(135deg, #fff 0%, #fff5f8 48%, #ffe9f1 100%);
+        border: 1px solid #f8d8e4;
+        border-radius: 28px;
+        padding: clamp(26px, 4vw, 46px);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .hero p {
+        max-width: 60ch;
+        margin-top: 16px;
+      }
+
+      .cta-row {
+        margin-top: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .btn {
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 0.92rem;
+        padding: 11px 18px;
+        transition: 0.25s ease;
+      }
+
+      .btn-primary {
+        background: var(--ocbc-red);
+        color: var(--white);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 20px rgba(176, 0, 58, 0.25);
+      }
+
+      .btn-secondary {
+        border: 1px solid #f3c4d6;
+        color: var(--ocbc-red);
+        background: #fff;
+      }
+
+      .hero-visual {
+        border-radius: 18px;
+        background: radial-gradient(circle at 20% 20%, #ffd8e6, #f7f8fc 65%);
+        border: 1px solid #f0dce4;
+        padding: 18px;
+        display: grid;
+        gap: 12px;
+      }
+
+      .mini-card {
+        background: #fff;
+        border: 1px solid var(--card-border);
+        border-radius: 12px;
+        padding: 12px 14px;
+        box-shadow: 0 5px 14px rgba(31, 41, 55, 0.06);
+      }
+
+      .mini-card strong {
+        display: block;
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+      }
+
+      .card {
+        background: var(--white);
+        border: 1px solid var(--card-border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-soft);
+        padding: clamp(18px, 2.8vw, 30px);
+      }
+
+      .grid-2,
+      .grid-3 {
+        display: grid;
+        gap: 18px;
+      }
+
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .feature-card h4,
+      .just-card h4,
+      .figure h4 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+      }
+
+      .icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 10px;
+        background: #ffe8f0;
+        color: var(--ocbc-red);
+        font-size: 1.15rem;
+      }
+
+      .subsection + .subsection {
+        margin-top: 18px;
+      }
+
+      .section-split {
+        display: grid;
+        gap: 20px;
+      }
+
+      .figure {
+        background: var(--white);
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        overflow: hidden;
+      }
+
+      .figure-visual {
+        min-height: 210px;
+        padding: 20px;
+        background: linear-gradient(135deg, #f9fafb, #eef2ff);
+        display: grid;
+        place-items: center;
+        border-bottom: 1px solid var(--card-border);
+      }
+
+      .figure-image {
+        width: 100%;
+        border-radius: 12px;
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 8px 24px rgba(31, 41, 55, 0.12);
+      }
+
+      .frame-browser {
+        width: min(520px, 100%);
+        border-radius: 14px;
+        border: 1px solid #dbe2ea;
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .browser-head {
+        padding: 9px 12px;
+        display: flex;
+        gap: 6px;
+        border-bottom: 1px solid #edf2f7;
+      }
+
+      .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #d1d5db;
+      }
+
+      .browser-body {
+        padding: 14px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .bar {
+        height: 10px;
+        background: #e5e7eb;
+        border-radius: 999px;
+      }
+
+      .bar.red {
+        background: #f9a8c0;
+      }
+
+      .figure-content {
+        padding: 18px;
+      }
+
+      .mobile-grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .mobile-mock {
+        width: min(240px, 100%);
+        margin: 0 auto;
+        border-radius: 24px;
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 10px 26px rgba(31, 41, 55, 0.18);
+      }
+
+      .phone {
+        width: min(220px, 100%);
+        margin: 0 auto;
+        border-radius: 28px;
+        border: 8px solid #111827;
+        background: #fff;
+        padding: 12px;
+        box-shadow: 0 12px 24px rgba(17, 24, 39, 0.2);
+      }
+
+      .phone .screen {
+        border-radius: 16px;
+        border: 1px solid #e5e7eb;
+        min-height: 230px;
+        padding: 12px;
+        display: grid;
+        gap: 8px;
+        background: linear-gradient(160deg, #fff, #f8fafc);
+      }
+
+      .phone .screen .bar {
+        height: 9px;
+      }
+
+      .reference-list {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted-text);
+      }
+
+      .reference-list li + li {
+        margin-top: 10px;
+      }
+
+      footer {
+        padding: 26px 0 38px;
+      }
+
+      footer p {
+        text-align: center;
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 960px) {
+        .hero-panel,
+        .grid-2,
+        .grid-3,
+        .mobile-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .top-nav .container {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        section {
+          padding: 62px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="container">
+        <div class="brand">OCBC Digital Proposal</div>
+        <nav class="menu" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#csr">CSR Initiative</a>
+          <a href="#website-design">Website Design</a>
+          <a href="#mobile-design">Mobile App Design</a>
+          <a href="#justification">Justification</a>
+          <a href="#references">References</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container">
+          <div class="hero-panel">
+            <div>
+              <span class="eyebrow">5013MKT Digital Coursework Poster</span>
+              <h1>OCBC Bank Digital Proposal</h1>
+              <h2 style="margin-top: 10px; color: var(--ocbc-red)">Financial Literacy for Gen Z</h2>
+              <p>
+                Redesigning OCBC’s website and mobile app to improve financial education,
+                humanise the brand, and strengthen engagement with younger users.
+              </p>
+              <div class="cta-row">
+                <a class="btn btn-primary" href="#summary">Explore Proposal</a>
+                <a class="btn btn-secondary" href="#website-design">View Designs</a>
+              </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+              <div class="mini-card">
+                <strong>Financial Wellness</strong>
+                <p>Micro-learning modules, tips, and practical budgeting guidance.</p>
+              </div>
+              <div class="mini-card">
+                <strong>Human-Centred Banking</strong>
+                <p>Supportive language, stories, and community-first storytelling.</p>
+              </div>
+              <div class="mini-card">
+                <strong>Gen Z Engagement</strong>
+                <p>Gamified challenges, rewards, and social motivation loops.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="summary">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Section 2</span>
+            <h2>Executive Summary</h2>
+          </div>
+          <article class="card">
+            <p>
+              This proposal presents a redesigned digital presence for OCBC Bank focused on Millennials
+              and Gen Z users. The central concept is a CSR initiative, Financial Literacy for Gen Z,
+              which positions OCBC as a trusted partner in long-term financial wellbeing rather than
+              only a provider of products. The project delivers two key outcomes: a refreshed website
+              experience and a mobile app concept built around practical money education, interactive
+              tools, and community engagement. Through clearer navigation, approachable content tone,
+              and gamified participation features, the redesign aims to increase customer interaction,
+              strengthen brand affinity, and improve overall usability across web and mobile touchpoints.
+              The result is a modern, human-centred platform that supports financial confidence for
+              younger users while aligning with OCBC’s credibility and growth objectives.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="csr">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Section 3</span>
+            <h2>Proposed New Online Presence</h2>
+          </div>
+
+          <div class="subsection card">
+            <h3>New CSR Initiative: Financial Literacy for Gen Z</h3>
+            <p style="margin-top: 10px">
+              OCBC should launch a CSR-led financial literacy programme aimed at helping young adults
+              build stronger budgeting, saving, and investing habits.
+            </p>
+            <div class="grid-2" style="margin-top: 18px">
+              <article class="feature-card">
+                <div class="icon">🎓</div>
+                <h4>Interactive Education Modules</h4>
+                <p>Digestible lessons and real-life money scenarios for practical learning.</p>
+              </article>
+              <article class="feature-card">
+                <div class="icon">💬</div>
+                <h4>Workshops and Webinars</h4>
+                <p>Student-friendly talks with financial coaches and peer-led sessions.</p>
+              </article>
+              <article class="feature-card">
+                <div class="icon">💰</div>
+                <h4>Savings Challenges and Tools</h4>
+                <p>Guided challenges and templates to build day-to-day money discipline.</p>
+              </article>
+              <article class="feature-card">
+                <div class="icon">📈</div>
+                <h4>Long-Term Confidence</h4>
+                <p>Progress pathways that encourage sustainable financial behaviour.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="subsection card">
+            <h3>Humanising the OCBC Brand</h3>
+            <p style="margin-top: 10px">
+              The new digital presence should make OCBC appear more approachable, empathetic, and
+              relevant to younger audiences.
+            </p>
+            <div class="grid-2" style="margin-top: 18px">
+              <article class="feature-card">
+                <h4>Real Student Stories</h4>
+                <p>Use testimonials to communicate authentic outcomes and trust.</p>
+              </article>
+              <article class="feature-card">
+                <h4>Supportive Tone of Voice</h4>
+                <p>Clear, friendly writing that reduces anxiety around financial topics.</p>
+              </article>
+              <article class="feature-card">
+                <h4>Community-Oriented Branding</h4>
+                <p>Show OCBC as an enabler of growth, not just a transaction provider.</p>
+              </article>
+              <article class="feature-card">
+                <h4>Focus on Financial Wellbeing</h4>
+                <p>Highlight confidence, habits, and wellbeing alongside product utility.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="subsection card">
+            <h3>New Opportunities for Engagement</h3>
+            <p style="margin-top: 10px">
+              The redesign should create more touchpoints for interaction and participation.
+            </p>
+            <div class="grid-3" style="margin-top: 18px">
+              <article class="feature-card"><h4>Gamified Savings</h4><p>Challenge-based milestones and streak rewards.</p></article>
+              <article class="feature-card"><h4>Leaderboard</h4><p>Friendly community competition with healthy motivation.</p></article>
+              <article class="feature-card"><h4>Rewards System</h4><p>Points, badges, and meaningful redemption paths.</p></article>
+              <article class="feature-card"><h4>Personalised Tips</h4><p>Data-informed recommendations by spending profile.</p></article>
+              <article class="feature-card"><h4>Workshop Sign-Ups</h4><p>One-click enrolment and event reminder flow.</p></article>
+              <article class="feature-card"><h4>Ongoing Participation</h4><p>Habit loops that sustain long-term app and web usage.</p></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="website-design">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Section 4</span>
+            <h2>Website Design Artefacts</h2>
+          </div>
+
+          <div class="section-split">
+            <article class="figure">
+              <div class="figure-visual">
+                <img class="figure-image" src="assets/fig1-homepage.svg" alt="Figure 1 homepage design mockup" />
+              </div>
+              <div class="figure-content">
+                <h4>Figure 1. Homepage</h4>
+                <p>
+                  The homepage introduces the new CSR initiative through a strong hero banner, clear
+                  navigation, and accessible calls to action. Design focus: hero banner, CSR intro,
+                  financial education highlights, community stories, and CTA buttons.
+                </p>
+              </div>
+            </article>
+
+            <article class="figure">
+              <div class="figure-visual">
+                <img class="figure-image" src="assets/fig2-csr-programme.svg" alt="Figure 2 CSR programme page design mockup" />
+              </div>
+              <div class="figure-content">
+                <h4>Figure 2. CSR Programme Page</h4>
+                <p>
+                  The CSR page explains the financial literacy initiative through learning modules,
+                  impact metrics, and student participation opportunities. Design focus: programme
+                  overview, modules, impact data, testimonials, and registration section.
+                </p>
+              </div>
+            </article>
+
+            <article class="figure">
+              <div class="figure-visual">
+                <img class="figure-image" src="assets/fig3-community-page.svg" alt="Figure 3 community page design mockup" />
+              </div>
+              <div class="figure-content">
+                <h4>Figure 3. Community Page</h4>
+                <p>
+                  The community page builds engagement by showcasing user-generated stories, events,
+                  and discussion opportunities. Design focus: community feed, discussion forum,
+                  leaderboard, and upcoming events.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="mobile-design">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Section 5</span>
+            <h2>Mobile App Design Artefacts</h2>
+          </div>
+
+          <div class="mobile-grid">
+            <article class="card">
+              <img class="mobile-mock" src="assets/fig4-financial-dashboard.svg" alt="Figure 4 financial wellness dashboard app design mockup" />
+              <h4 style="margin-top: 16px">Figure 4. Financial Wellness Dashboard</h4>
+              <p>
+                The dashboard gives users an instant view of financial health score, savings progress,
+                and personalised tips in a clear card-based layout.
+              </p>
+            </article>
+
+            <article class="card">
+              <img class="mobile-mock" src="assets/fig5-budget-tracker.svg" alt="Figure 5 budget tracker app design mockup" />
+              <h4 style="margin-top: 16px">Figure 5. Budget Tracker</h4>
+              <p>
+                The budget tracker helps Gen Z users monitor spending categories, identify trends,
+                and improve awareness through progress indicators.
+              </p>
+            </article>
+
+            <article class="card">
+              <img class="mobile-mock" src="assets/fig6-rewards-system.svg" alt="Figure 6 rewards system app design mockup" />
+              <h4 style="margin-top: 16px">Figure 6. Rewards System</h4>
+              <p>
+                The rewards system uses gamification with points, badges, and challenge progress to
+                increase engagement and motivate positive financial behaviour.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="justification">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Section 6</span>
+            <h2>Overall Design Justification</h2>
+          </div>
+          <div class="grid-3">
+            <article class="card just-card"><h4>Principles of Design</h4><p>Visual hierarchy, balance, contrast, and consistency structure the full experience.</p></article>
+            <article class="card just-card"><h4>Designing for Mobile and Web</h4><p>Responsive behaviour and cross-platform consistency support smooth user transitions.</p></article>
+            <article class="card just-card"><h4>Designing for Usability</h4><p>Clear navigation and intuitive information flow reduce cognitive load.</p></article>
+            <article class="card just-card"><h4>Writing for the Web</h4><p>Concise copy, short paragraphs, and scannable headings improve readability.</p></article>
+            <article class="card just-card"><h4>Website Development</h4><p>Structured information architecture and conversion-focused layout support growth.</p></article>
+            <article class="card just-card"><h4>App Development</h4><p>Card-based interactions and gamified features align with Gen Z engagement patterns.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="references">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Section 7</span>
+            <h2>References</h2>
+          </div>
+          <article class="card">
+            <ol class="reference-list">
+              <li>Norman, D. (2013). <em>The Design of Everyday Things</em>. Basic Books.</li>
+              <li>Krug, S. (2014). <em>Don’t Make Me Think, Revisited</em>. New Riders.</li>
+              <li>Nielsen, J. (2020). 10 usability heuristics for user interface design. Nielsen Norman Group.</li>
+              <li>World Bank. (2022). Financial capability and youth inclusion insights.</li>
+              <li>OCBC Bank. (2024). Corporate social responsibility and digital banking initiatives.</li>
+            </ol>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>OCBC Bank – Financial Literacy for Gen Z | 5013MKT Digital Proposal Microsite</p>
+      </div>
+    </footer>
+  </body>
+</html>
